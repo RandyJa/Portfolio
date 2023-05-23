@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dokdo&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background-color: #990011FF;
+        }
+
+        /*Desktop*/
+
+        @media only screen and (min-width: 1024px){
+
+        #block1{
+            height: 9vh;
+            background-color: #990011FF;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        #text{
+            position: absolute;
+            color: #FCF6F5FF;
+            font-size: 5vh;
+            text-shadow: black 3px 4px;
+            font-family: 'Dokdo', cursive;
+            cursor: pointer;
+            left: 37vh;
+            top: 1vh;
+        }
+
+        .noDecoration, h1, h1:hover{
+            text-decoration: none;
+        }
+
+        h1:hover {
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 300%;
+        animation: shine 1s infinite;
+        }
+
+        h2:hover {
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 300%;
+        animation: shine 1s infinite;
+        }
+
+        #contact{
+            position: absolute;
+            color: #FCF6F5FF;
+            font-size: 3.5vh;
+            text-shadow: black 3px 4px;
+            font-family: 'Dokdo', cursive;
+            cursor: pointer;
+            right: 37vh;
+            top: 2.3vh;
+        }
+
+        #About{
+            position: absolute;
+            color: #FCF6F5FF;
+            font-size: 3.5vh;
+            text-shadow: black 3px 4px;
+            font-family: 'Dokdo', cursive;
+            cursor: pointer;
+            right: 77vh;
+            top: 2.3vh;
+        }
+
+        #Github{
+            position: absolute;
+            color: #FCF6F5FF;
+            font-size: 3.5vh;
+            text-shadow: black 3px 4px;
+            font-family: 'Dokdo', cursive;
+            cursor: pointer;
+            right: 57.5vh;
+            top: 2.3vh;
+        }
+
+        #block2{
+            background-image: url("https://rare-gallery.com/mocahbig/448180-macro-depth-of-field-programming-language-code-pixels.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #FCF6F5FF;
+            height: 75vh;
+            filter: invert(95%);
+        }
+
+        #theName{
+            color: white;
+            font-size: 20vh;
+        }
+
+    }
+
+    /*Phone*/
+
+    @media only screen and (max-width: 1023px){
+
+        #block1{
+            height: 8vh;
+            background-color: #990011FF;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+        }
+
+        #text{
+            position: absolute;
+            color: #FCF6F5FF;
+            font-size: 4.5vh;
+            text-shadow: black 3px 4px;
+            font-family: 'Dokdo', cursive;
+            cursor: pointer;
+            left: 1vh;
+            top: 1vh;
+        }
+
+        .noDecoration, h1, h1:hover{
+            text-decoration: none;
+        }
+
+        h1:hover {
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 300%;
+        animation: shine 1s infinite;
+        }
+
+        h2:hover {
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 300%;
+        animation: shine 1s infinite;
+        }
+
+        #contact{
+            position: absolute;
+            color: #FCF6F5FF;
+            font-size: 3.5vh;
+            text-shadow: black 3px 4px;
+            font-family: 'Dokdo', cursive;
+            cursor: pointer;
+            right: 1vh;
+            top: 1.8vh;
+        }
+
+        #About{
+            display: none;
+        }
+
+        #Github{
+            display: none;
+        }
+
+        #block2{
+            background-image: url("https://rare-gallery.com/mocahbig/448180-macro-depth-of-field-programming-language-code-pixels.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #FCF6F5FF;
+            height: 40vh;
+            filter: invert(95%);
+        }
+
+        #theName{
+            color: white;
+            font-size: 20vh;
+        }
+
+    }
+
+        /* Name Animation*/
+
+        body {
+        color: #ccc;
+        font-family: 'Dokdo', cursive;
+        }
+
+        h1,
+        h2 {
+        margin: 0;
+        }
+
+        a {
+        color: #ccc;
+        }
+
+        section {
+        padding: 20px;
+        }
+
+        .hero {
+        font-size: clamp(40px, 10vw, 100px);
+        line-height: 1;
+        display: inline-block;
+        color: #fff;
+        z-index: 2;
+        letter-spacing: 10px;
+
+        filter: drop-shadow(0 1px 3px);
+        }
+
+        .demo {
+        height: 100px;
+        background: #fff;
+        }
+
+        .layers {
+        position: relative;
+        }
+
+        .layers::before,
+        .layers::after {
+        content: attr(data-text);
+        position: absolute;
+        width: 110%;
+        z-index: -1;
+        }
+
+        .layers::before {
+        top: 10px;
+        left: 15px;
+        color: #990011FF;
+        }
+
+        .layers::after {
+        top: 5px;
+        left: -10px;
+        color: #1bc7fb;
+        }
+
+        .single-path {
+        clip-path: polygon(
+            0% 12%,
+            53% 12%,
+            53% 26%,
+            25% 26%,
+            25% 86%,
+            31% 86%,
+            31% 0%,
+            53% 0%,
+            53% 84%,
+            92% 84%,
+            92% 82%,
+            70% 82%,
+            70% 29%,
+            78% 29%,
+            78% 65%,
+            69% 65%,
+            69% 66%,
+            77% 66%,
+            77% 45%,
+            85% 45%,
+            85% 26%,
+            97% 26%,
+            97% 28%,
+            84% 28%,
+            84% 34%,
+            54% 34%,
+            54% 89%,
+            30% 89%,
+            30% 58%,
+            83% 58%,
+            83% 5%,
+            68% 5%,
+            68% 36%,
+            62% 36%,
+            62% 1%,
+            12% 1%,
+            12% 34%,
+            60% 34%,
+            60% 57%,
+            98% 57%,
+            98% 83%,
+            1% 83%,
+            1% 53%,
+            91% 53%,
+            91% 84%,
+            8% 84%,
+            8% 83%,
+            4% 83%
+        );
+        }
+
+        .paths {
+        animation: paths 5s step-end infinite;
+        }
+
+        @keyframes paths {
+        0% {
+            clip-path: polygon(
+            0% 43%,
+            83% 43%,
+            83% 22%,
+            23% 22%,
+            23% 24%,
+            91% 24%,
+            91% 26%,
+            18% 26%,
+            18% 83%,
+            29% 83%,
+            29% 17%,
+            41% 17%,
+            41% 39%,
+            18% 39%,
+            18% 82%,
+            54% 82%,
+            54% 88%,
+            19% 88%,
+            19% 4%,
+            39% 4%,
+            39% 14%,
+            76% 14%,
+            76% 52%,
+            23% 52%,
+            23% 35%,
+            19% 35%,
+            19% 8%,
+            36% 8%,
+            36% 31%,
+            73% 31%,
+            73% 16%,
+            1% 16%,
+            1% 56%,
+            50% 56%,
+            50% 8%
+            );
+        }
+
+        5% {
+            clip-path: polygon(
+            0% 29%,
+            44% 29%,
+            44% 83%,
+            94% 83%,
+            94% 56%,
+            11% 56%,
+            11% 64%,
+            94% 64%,
+            94% 70%,
+            88% 70%,
+            88% 32%,
+            18% 32%,
+            18% 96%,
+            10% 96%,
+            10% 62%,
+            9% 62%,
+            9% 84%,
+            68% 84%,
+            68% 50%,
+            52% 50%,
+            52% 55%,
+            35% 55%,
+            35% 87%,
+            25% 87%,
+            25% 39%,
+            15% 39%,
+            15% 88%,
+            52% 88%
+            );
+        }
+
+        30% {
+            clip-path: polygon(
+            0% 53%,
+            93% 53%,
+            93% 62%,
+            68% 62%,
+            68% 37%,
+            97% 37%,
+            97% 89%,
+            13% 89%,
+            13% 45%,
+            51% 45%,
+            51% 88%,
+            17% 88%,
+            17% 54%,
+            81% 54%,
+            81% 75%,
+            79% 75%,
+            79% 76%,
+            38% 76%,
+            38% 28%,
+            61% 28%,
+            61% 12%,
+            55% 12%,
+            55% 62%,
+            68% 62%,
+            68% 51%,
+            0% 51%,
+            0% 92%,
+            63% 92%,
+            63% 4%,
+            65% 4%
+            );
+        }
+
+        45% {
+            clip-path: polygon(
+            0% 33%,
+            2% 33%,
+            2% 69%,
+            58% 69%,
+            58% 94%,
+            55% 94%,
+            55% 25%,
+            33% 25%,
+            33% 85%,
+            16% 85%,
+            16% 19%,
+            5% 19%,
+            5% 20%,
+            79% 20%,
+            79% 96%,
+            93% 96%,
+            93% 50%,
+            5% 50%,
+            5% 74%,
+            55% 74%,
+            55% 57%,
+            96% 57%,
+            96% 59%,
+            87% 59%,
+            87% 65%,
+            82% 65%,
+            82% 39%,
+            63% 39%,
+            63% 92%,
+            4% 92%,
+            4% 36%,
+            24% 36%,
+            24% 70%,
+            1% 70%,
+            1% 43%,
+            15% 43%,
+            15% 28%,
+            23% 28%,
+            23% 71%,
+            90% 71%,
+            90% 86%,
+            97% 86%,
+            97% 1%,
+            60% 1%,
+            60% 67%,
+            71% 67%,
+            71% 91%,
+            17% 91%,
+            17% 14%,
+            39% 14%,
+            39% 30%,
+            58% 30%,
+            58% 11%,
+            52% 11%,
+            52% 83%,
+            68% 83%
+            );
+        }
+
+        76% {
+            clip-path: polygon(
+            0% 26%,
+            15% 26%,
+            15% 73%,
+            72% 73%,
+            72% 70%,
+            77% 70%,
+            77% 75%,
+            8% 75%,
+            8% 42%,
+            4% 42%,
+            4% 61%,
+            17% 61%,
+            17% 12%,
+            26% 12%,
+            26% 63%,
+            73% 63%,
+            73% 43%,
+            90% 43%,
+            90% 67%,
+            50% 67%,
+            50% 41%,
+            42% 41%,
+            42% 46%,
+            50% 46%,
+            50% 84%,
+            96% 84%,
+            96% 78%,
+            49% 78%,
+            49% 25%,
+            63% 25%,
+            63% 14%
+            );
+        }
+
+        90% {
+            clip-path: polygon(
+            0% 41%,
+            13% 41%,
+            13% 6%,
+            87% 6%,
+            87% 93%,
+            10% 93%,
+            10% 13%,
+            89% 13%,
+            89% 6%,
+            3% 6%,
+            3% 8%,
+            16% 8%,
+            16% 79%,
+            0% 79%,
+            0% 99%,
+            92% 99%,
+            92% 90%,
+            5% 90%,
+            5% 60%,
+            0% 60%,
+            0% 48%,
+            89% 48%,
+            89% 13%,
+            80% 13%,
+            80% 43%,
+            95% 43%,
+            95% 19%,
+            80% 19%,
+            80% 85%,
+            38% 85%,
+            38% 62%
+            );
+        }
+
+        1%,
+        7%,
+        33%,
+        47%,
+        78%,
+        93% {
+            clip-path: none;
+        }
+        }
+
+        .movement {
+        position: relative;
+        animation: movement 8s step-end infinite;
+        }
+
+        @keyframes movement {
+        0% {
+            top: 0px;
+            left: -20px;
+        }
+
+        15% {
+            top: 10px;
+            left: 10px;
+        }
+
+        60% {
+            top: 5px;
+            left: -10px;
+        }
+
+        75% {
+            top: -5px;
+            left: 20px;
+        }
+
+        100% {
+            top: 10px;
+            left: 5px;
+        }
+        }
+
+        .opacity {
+        animation: opacity 5s step-end infinite;
+        }
+
+        @keyframes opacity {
+        0% {
+            opacity: 0.1;
+        }
+
+        5% {
+            opacity: 0.7;
+        }
+
+        30% {
+            opacity: 0.4;
+        }
+
+        45% {
+            opacity: 0.6;
+        }
+
+        76% {
+            opacity: 0.4;
+        }
+
+        90% {
+            opacity: 0.8;
+        }
+
+        1%,
+        7%,
+        33%,
+        47%,
+        78%,
+        93% {
+            opacity: 0;
+        }
+        }
+
+        .font {
+        animation: font 7s step-end infinite;
+        }
+
+        @keyframes font {
+        0% {
+            font-weight: 100;
+            color: #990011FF;
+            filter: blur(3px);
+        }
+
+        20% {
+            font-weight: 500;
+            color: #fff;
+            filter: blur(0);
+        }
+
+        50% {
+            font-weight: 300;
+            color: #1bc7fb;
+            filter: blur(2px);
+        }
+
+        60% {
+            font-weight: 700;
+            color: #fff;
+            filter: blur(0);
+        }
+
+        90% {
+            font-weight: 500;
+            color: #990011FF;
+            filter: blur(6px);
+        }
+        }
+
+        .glitch span {
+        animation: paths 5s step-end infinite;
+        }
+
+        .glitch::before {
+        animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+            font 8s step-end infinite, movement 10s step-end infinite;
+        }
+
+        .glitch::after {
+        animation: paths 5s step-end infinite, opacity 5s step-end infinite,
+            font 7s step-end infinite, movement 8s step-end infinite;
+        }
+
+        .hero-container {
+        position: relative;
+        text-align: center;
+        }
+
+        .environment {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.5;
+        filter: blur(5px);
+        }
+
+        #work{
+        position: relative;
+        text-align: center;
+        bottom:-4vh;
+        font-size: 8vh;
+        color: white;
+        text-shadow: black 3px 4px;
+        font-family: 'Dokdo', cursive;
+        }
+
+        /* Grid Boxes */
+
+        /*Desktop*/
+
+        @media only screen and (min-width: 1024px){
+
+        .grid-boxes{
+            display: grid;
+            position: relative;
+            grid-template-columns: auto auto auto;
+            gap: 3vh;
+            text-align: center;
+            justify-content: center;
+            bottom: -9vh;
+        }
+
+        .grid-boxes > div{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 27vh;
+            width: 45vh;
+        }
+
+        .pic1{
+            background-image: url("italy1.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic2{
+            background-image: url("PS.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic3{
+            background-image: url("Quiz App.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic4{
+            background-image: url("Photo Gallery.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic5{
+            background-image: url("calculator.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic6{
+            background-image: url("Rock Paper Scissors.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic7{
+            background-image: url("ToDoList.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic8{
+            background-image: url("The Pink Donut.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic9{
+            background-image: url("KanyeAPI.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic10{
+            background-image: url("Note App.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic11{
+            background-image: url("GUESS.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic12{
+            background-image: url("Game idea.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .grid-item {
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            width: 45vh;
+            height: 27vh;
+        }
+
+        #aboutMe{
+            position: relative;
+            text-align: center;
+            bottom:-4vh;
+            font-size: 8vh;
+            color: white;
+            text-shadow: black 3px 4px;
+            font-family: 'Dokdo', cursive;
+        }
+
+        #dogpic{
+            margin-left: 20vh;
+            height: 60vh;
+            width: 50vh;
+        }
+
+        .info{
+            position: absolute;
+            left: 81vh;
+            top: 240vh;
+            font-size: 7vh;
+        }
+
+        #information{
+            color: white;
+        }
+
+        #informationSelf{
+            font-size: 4vh;
+            color: rgb(218, 215, 215);
+        }
+
+        #in{
+            font-size: 3vh;
+        }
+
+        #in2{
+            font-size: 2vh;
+        }
+
+        .footer{
+            border-top: 1px solid white;
+            background-color:#990011FF;
+            height: 15vh;
+            bottom: auto;
+            color: #FCF6F5FF;
+            text-align: center;
+        }
+    }
+
+    /* Grid Boxes */
+
+    /*Phone*/
+
+    @media only screen and (max-width: 1023px){
+        .grid-boxes{
+            display: grid;
+            position: relative;
+            grid-template-columns: auto;
+            gap: 3vh;
+            text-align: center;
+            justify-content: center;
+            bottom: -9vh;
+        }
+
+        .grid-boxes > div{
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 27vh;
+            width: 45vh;
+        }
+
+        .pic1{
+            background-image: url("italy1.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic2{
+            background-image: url("PS.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic3{
+            background-image: url("Quiz App.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic4{
+            background-image: url("Photo Gallery.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic5{
+            background-image: url("calculator.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic6{
+            background-image: url("Rock Paper Scissors.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic7{
+            background-image: url("ToDoList.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic8{
+            background-image: url("The Pink Donut.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic9{
+            background-image: url("KanyeAPI.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic10{
+            background-image: url("Note App.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic11{
+            background-image: url("GUESS.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .pic12{
+            background-image: url("Game idea.PNG");
+            background-size: 45vh 27vh;
+            background-repeat: no-repeat;
+        }
+
+        .grid-item {
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            width: 45vh;
+            height: 27vh;
+        }
+
+        #aboutMe{
+            position: relative;
+            text-align: center;
+            bottom:-4vh;
+            font-size: 8vh;
+            color: white;
+            text-shadow: black 3px 4px;
+            font-family: 'Dokdo', cursive;
+        }
+
+        #dogpic{
+            background-image: url("https://as1.ftcdn.net/v2/jpg/00/63/52/32/1000_F_63523294_G2AeMvCWP72WHR5jw02pWUVGf20mRe7X.jpg");
+            background-repeat: no-repeat;
+            margin-left: auto;
+            margin-left: auto;
+            width: 100%;
+            height: 35vh;
+        }
+
+        #information{
+            font-size: 4.5vh;
+            color: white;
+        }
+
+        #informationSelf{
+            font-size: 3vh;
+            color: rgb(240, 230, 230);
+        }
+
+        #in{
+            font-size: 2vh;
+        }
+
+        #in2{
+            font-size: 1.5vh;
+        }
+
+        .footer{
+            background-color:#990011FF;
+            border-top: 1px solid white;
+            text-align: center;
+            height: 12vh;
+            bottom: auto;
+            color: #FCF6F5FF;
+        }
+    }
+
+    </style>
+</head>
+<body>
+
+    <header id="block1">
+        <a href="Portfolio.html">
+        <h1 id="text" href="Portfolio.html">Randy Jaimes</h1>
+        </a>
+        <a href="#aboutMe">
+        <h2 id="About">About</h2>
+        </a>
+        <a href="https://github.com/RandyJa" target="_blank">
+        <h2 id="Github">Github</h2>
+        </a>
+        <a href="contact.html">
+        <h2 id="contact">Contact</h2>
+        </a>
+    </header>
+
+    <div id="block2">
+        <h3 id="theName"></h1>
+    </div>
+
+     
+    <div class="hero-container">
+        <!-- <h2 class="hero glitch layers" data-text="Randy"><span>Randy</span></h2> -->
+      </div>
+
+
+    <div id="work">Projects</div>
+
+    <div class="grid-boxes">
+    <div class="pic1">
+        <a href="https://randyja.github.io/jQuery-Website/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic2">
+        <a href="https://randyja.github.io/Pink-Sauce/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic3">
+        <a href="https://randyja.github.io/Quizz-Template/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic4">
+        <a href="https://randyja.github.io/Noir/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic5">
+        <a href="https://randyja.github.io/Calculator/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic6">
+        <a href="https://randyja.github.io/Rock-Paper-Scissors/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic7">
+        <a href="https://randyja.github.io/ToDoList/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic8">
+        <a href="https://randyja.github.io/The-Pink-Donut/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic9">
+        <a href="https://randyja.github.io/KanyeAPI/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic10">
+        <a href="https://randyja.github.io/Note-App/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic11">
+        <a href="https://randyja.github.io/GUESS/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    <div class="pic12">
+        <a href="https://randyja.github.io/Game-Idea/" target = "_blank">
+        <div class="grid-item"></div>
+        </a>
+    </div>
+    </div>
+
+    <br><br><br>
+
+    <div id="aboutMe">About Me</div>
+
+    <br><br><br>
+
+    <img id="dogpic" src="https://as1.ftcdn.net/v2/jpg/00/63/52/32/1000_F_63523294_G2AeMvCWP72WHR5jw02pWUVGf20mRe7X.jpg">
+
+<div class="info">
+    <p id="information">Hi!<br>My name is Randy.</p>
+    <p id="informationSelf">I am a Software Developer that has numerous skills in a variety of topics. Professient in multiple languages, I provide efficient solutions to complex problems.</p>
+</div>
+
+    <br><br><br><br><br><br>
+
+    <div class="footer">
+        <div id="et">
+        <br>
+        <div id="in">Terms of Use Privacy Policy</div>
+        <br>
+        <div id="in2">&copy2023 Randy Jaimes</div>
+    </div>
+    </div>
+
+</body>
+</html>
